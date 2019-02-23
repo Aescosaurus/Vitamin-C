@@ -4,7 +4,7 @@
 #include "SDL.h"
 #include "utils.h"
 
-void handle_keyboard_event( SDL_Event evt );
+void handle_keyboard_event( const SDL_Event* evt );
 bool_t key_is_pressed( SDL_Keycode key );
 
 #endif

@@ -8,11 +8,12 @@
 void create_window( const string_t title,int x,int y,
 	int width,int height,bool_t fullscreen );
 
-void handle_events();
+// Returns false when event queue has been exhausted.
+bool_t handle_events();
 void destroy_window();
 
 bool_t window_is_open();
 SDL_Renderer* get_renderer();
-SDL_Event window_get_event();
+SDL_Event* window_get_event();
 
 #endif

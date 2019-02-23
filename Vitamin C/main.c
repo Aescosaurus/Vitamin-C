@@ -26,19 +26,28 @@ int main( int argc,char* argv[] )
 
 		begin_frame();
 
-		handle_events();
-		handle_keyboard_event( window_get_event() );
-		handle_mouse_event( window_get_event() );
+		while( handle_events() )
+		{
+			handle_keyboard_event( window_get_event() );
+			handle_mouse_event( window_get_event() );
+		}
 		
 		if( mouse_left_is_pressed() )
 		{
+			color_t col = make_rgb( 255,255,255 );
+			if( key_is_pressed( SDLK_SPACE ) )
+			{
+				col = make_rgb( 0,255,255 );
+			}
+		
 			draw_rect( mouse_get_pos_x() - 15,
 				mouse_get_pos_y() - 15,
 				30,30,
-				make_rgb( 255,255,255 ) );
+				col );
 		}
 
 		end_frame();
+
 		frameTime = SDL_GetTicks() - frameStart;
 		
 		if( frameTime < frameDelay )

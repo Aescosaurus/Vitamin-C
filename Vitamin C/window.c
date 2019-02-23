@@ -37,9 +37,9 @@ void create_window( const string_t title,int x,int y,
 	}
 }
 
-void handle_events()
+bool_t handle_events()
 {
-	SDL_PollEvent( &window_event );
+	bool_t result = SDL_PollEvent( &window_event );
 
 	switch( window_event.type )
 	{
@@ -47,6 +47,8 @@ void handle_events()
 		window_running = FALSE;
 		break;
 	}
+
+	return( result );
 }
 
 void destroy_window()
@@ -69,7 +71,7 @@ SDL_Renderer* get_renderer()
 	return( renderer );
 }
 
-SDL_Event window_get_event()
+SDL_Event* window_get_event()
 {
-	return( window_event );
+	return( &window_event );
 }

@@ -2,12 +2,12 @@
 
 bool_t key_press_states[128] = { FALSE };
 
-void handle_keyboard_event( SDL_Event evt )
+void handle_keyboard_event( const SDL_Event* evt )
 {
-	const int key = evt.key.keysym.sym;
+	const int key = evt->key.keysym.sym;
 	if( key > 0 && key < 128 )
 	{
-		key_press_states[key] = ( evt.type == SDL_KEYDOWN );
+		key_press_states[key] = ( evt->type == SDL_KEYDOWN );
 	}
 }
 
