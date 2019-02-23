@@ -32,9 +32,18 @@ void end_frame()
 	SDL_RenderCopy( gfx_renderer,tex,NULL,NULL );
 
 	SDL_DestroyTexture( tex );
-	
 
 	SDL_RenderPresent( gfx_renderer );
+
+	const int r_mask = 0xff000000;
+	const int g_mask = 0x00ff0000;
+	const int b_mask = 0x0000ff00;
+	const int a_mask = 0x000000ff;
+
+	SDL_FreeSurface( screen_surface );
+	screen_surface = SDL_CreateRGBSurface( 0,
+		ScreenWidth,ScreenHeight,32,
+		r_mask,g_mask,b_mask,a_mask );
 }
 
 void free_graphics()

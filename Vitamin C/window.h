@@ -13,5 +13,6 @@ void destroy_window();
 
 bool_t window_is_open();
 SDL_Renderer* get_renderer();
+SDL_Event window_get_event();
 
 #endif

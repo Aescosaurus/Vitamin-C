@@ -152,12 +152,14 @@
   <ItemGroup>
     <ClCompile Include="colors.c" />
     <ClCompile Include="graphics.c" />
+    <ClCompile Include="keyboard.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="window.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="colors.h" />
     <ClInclude Include="graphics.h" />
+    <ClInclude Include="keyboard.h" />
     <ClInclude Include="utils.h" />
     <ClInclude Include="window.h" />
   </ItemGroup>

@@ -2,6 +2,7 @@
 #include "window.h"
 #include "graphics.h"
 #include "colors.h"
+#include "keyboard.h"
 
 int main( int argc,char* argv[] )
 {
@@ -47,7 +48,11 @@ int main( int argc,char* argv[] )
 		begin_frame();
 
 		handle_events();
-		put_pixel( 50,50,make_rgb( 0,255,255 ) );
+		handle_keyboard_event( window_get_event() );
+		if( key_is_pressed( SDLK_w ) )
+		{
+			put_pixel( 50,50,make_rgb( 255,50,255 ) );
+		}
 
 		end_frame();
 	}

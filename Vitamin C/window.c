@@ -67,3 +67,8 @@ SDL_Renderer* get_renderer()
 {
 	return( renderer );
 }
+
+SDL_Event window_get_event()
+{
+	return( evt );
+}
