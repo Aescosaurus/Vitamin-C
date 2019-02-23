@@ -9,4 +9,7 @@ typedef unsigned char bool_t;
 // String definition.
 typedef char* string_t;
 
+// Easier way to say unsigned types.
+typedef unsigned char uchar;
+
 #endif

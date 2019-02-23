@@ -1,5 +1,7 @@
 #include "SDL.h"
 #include "window.h"
+#include "graphics.h"
+#include "colors.h"
 
 int main( int argc,char* argv[] )
 {
@@ -35,16 +37,23 @@ int main( int argc,char* argv[] )
 
 	create_window( "Vitamin C Framework!",
 		SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,
-		800,600,FALSE );
+		ScreenWidth,ScreenHeight,FALSE );
+
+	init_graphics( get_renderer() );
+	init_colors( get_pixel_format() );
 
 	while( window_is_open() )
 	{
 		begin_frame();
 
 		handle_events();
+		put_pixel( 50,50,make_rgb( 0,255,255 ) );
 
 		end_frame();
 	}
+
+	free_graphics();
+	destroy_window();
 
 	return( 0 );
 }

@@ -49,16 +49,6 @@ void handle_events()
 	}
 }
 
-void begin_frame()
-{
-	SDL_RenderClear( renderer );
-}
-
-void end_frame()
-{
-	SDL_RenderPresent( renderer );
-}
-
 void destroy_window()
 {
 	SDL_DestroyWindow( window );
@@ -71,4 +61,9 @@ void destroy_window()
 bool_t window_is_open()
 {
 	return( window_running );
+}
+
+SDL_Renderer* get_renderer()
+{
+	return( renderer );
 }
