@@ -11,6 +11,7 @@ void end_frame();
 void free_graphics();
 
 void put_pixel( int x,int y,color_t c );
+void draw_rect( int x,int y,int width,int height,color_t c );
 
 SDL_PixelFormat* get_pixel_format();
 

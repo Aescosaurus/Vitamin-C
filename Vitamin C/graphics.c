@@ -1,4 +1,5 @@
 #include "graphics.h"
+#include <assert.h>
 
 SDL_Renderer* gfx_renderer = NULL;
 SDL_Surface* screen_surface = NULL;
@@ -53,11 +54,27 @@ void free_graphics()
 
 void put_pixel( int x,int y,color_t c )
 {
+	assert( x >= 0 );
+	assert( y >= 0 );
+	assert( x < ScreenWidth );
+	assert( y < ScreenHeight );
+
 	Uint8* p = ( Uint8* )screen_surface->pixels +
 		y * screen_surface->pitch +
 		x * get_pixel_format()->BytesPerPixel;
 
 	*( Uint32* )p = c;
+}
+
+void draw_rect( int x,int y,int width,int height,color_t c )
+{
+	for( int y_c = y; y_c < y + height; ++y_c )
+	{
+		for( int x_c = x; x_c < x + width; ++x_c )
+		{
+			put_pixel( x_c,y_c,c );
+		}
+	}
 }
 
 SDL_PixelFormat* get_pixel_format()

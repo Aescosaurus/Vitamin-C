@@ -2,7 +2,7 @@
 
 SDL_Renderer* renderer = NULL;
 SDL_Window* window = NULL;
-SDL_Event evt;
+SDL_Event window_event;
 bool_t window_running = FALSE;
 
 void create_window( const string_t title,int x,int y,
@@ -39,9 +39,9 @@ void create_window( const string_t title,int x,int y,
 
 void handle_events()
 {
-	SDL_PollEvent( &evt );
+	SDL_PollEvent( &window_event );
 
-	switch( evt.type )
+	switch( window_event.type )
 	{
 	case SDL_QUIT:
 		window_running = FALSE;
@@ -54,8 +54,9 @@ void destroy_window()
 	SDL_DestroyWindow( window );
 	SDL_DestroyRenderer( renderer );
 
-	SDL_Quit();
 	printf( "(+) Window destroyed!\n" );
+
+	SDL_Quit();
 }
 
 bool_t window_is_open()
@@ -70,5 +71,5 @@ SDL_Renderer* get_renderer()
 
 SDL_Event window_get_event()
 {
-	return( evt );
+	return( window_event );
 }

@@ -3,38 +3,15 @@
 #include "graphics.h"
 #include "colors.h"
 #include "keyboard.h"
+#include "mouse.h"
 
 int main( int argc,char* argv[] )
 {
-	// const int fps = 60;
-	// const int frameDelay = 1000 / fps;
-	// 
-	// Uint32 frameStart;
-	// int frameTime;
-	// 
-	// game = new Game();
-	// 
-	// game->init( "The Game!",
-	// 	SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,
-	// 	800,640,false );
-	// 
-	// while( game->running() )
-	// {
-	// 	frameStart = SDL_GetTicks();
-	// 
-	// 	game->handleEvents();
-	// 	game->update();
-	// 	game->render();
-	// 
-	// 	frameTime = SDL_GetTicks() - frameStart;
-	// 
-	// 	if( frameTime < frameDelay )
-	// 	{
-	// 		SDL_Delay( frameDelay - frameTime );
-	// 	}
-	// }
-	// 
-	// game->clean();
+	const int fps = 60;
+	const int frameDelay = 1000 / fps;
+	
+	Uint32 frameStart;
+	int frameTime;
 
 	create_window( "Vitamin C Framework!",
 		SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,
@@ -45,16 +22,29 @@ int main( int argc,char* argv[] )
 
 	while( window_is_open() )
 	{
+		frameStart = SDL_GetTicks();
+
 		begin_frame();
 
 		handle_events();
 		handle_keyboard_event( window_get_event() );
-		if( key_is_pressed( SDLK_w ) )
+		handle_mouse_event( window_get_event() );
+		
+		if( mouse_left_is_pressed() )
 		{
-			put_pixel( 50,50,make_rgb( 255,50,255 ) );
+			draw_rect( mouse_get_pos_x() - 15,
+				mouse_get_pos_y() - 15,
+				30,30,
+				make_rgb( 255,255,255 ) );
 		}
 
 		end_frame();
+		frameTime = SDL_GetTicks() - frameStart;
+		
+		if( frameTime < frameDelay )
+		{
+			SDL_Delay( frameDelay - frameTime );
+		}
 	}
 
 	free_graphics();
