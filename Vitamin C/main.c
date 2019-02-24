@@ -21,6 +21,7 @@ int main( int argc,char* argv[] )
 
 	init_graphics( get_renderer() );
 	init_colors( get_pixel_format() );
+	init_audio();
 
 	while( window_is_open() )
 	{
