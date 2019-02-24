@@ -36,15 +36,8 @@ void end_frame()
 
 	SDL_RenderPresent( gfx_renderer );
 
-	const int r_mask = 0xff000000;
-	const int g_mask = 0x00ff0000;
-	const int b_mask = 0x0000ff00;
-	const int a_mask = 0x000000ff;
-
-	SDL_FreeSurface( screen_surface );
-	screen_surface = SDL_CreateRGBSurface( 0,
-		ScreenWidth,ScreenHeight,32,
-		r_mask,g_mask,b_mask,a_mask );
+	// Much better than the old way!
+	SDL_FillRect( screen_surface,NULL,make_rgb( 0,0,0 ) );
 }
 
 void free_graphics()
@@ -69,18 +62,4 @@ void put_pixel( int x,int y,color_t c )
 SDL_PixelFormat* get_pixel_format()
 {
 	return( screen_surface->format );
-}
-
-color_t get_pixel( int x,int y )
-{
-	assert( x >= 0 );
-	assert( y >= 0 );
-	assert( x < ScreenWidth );
-	assert( y < ScreenHeight );
-
-	Uint8* p = ( Uint8* )screen_surface->pixels +
-		y * screen_surface->pitch +
-		x * get_pixel_format()->BytesPerPixel;
-
-	return( p );
 }

@@ -5,6 +5,7 @@
 #include "keyboard.h"
 #include "mouse.h"
 #include "sound.h"
+#include "game.h"
 
 int main( int argc,char* argv[] )
 {
@@ -22,11 +23,13 @@ int main( int argc,char* argv[] )
 	init_colors( get_pixel_format() );
 	init_audio();
 
+	initialize_game();
+
 	while( window_is_open() )
 	{
 		frameStart = SDL_GetTicks();
 
-		begin_frame();
+		begin_frame(); // Begin the graphics frame.
 
 		// Process events until there are none left.
 		while( handle_events() )
@@ -35,7 +38,10 @@ int main( int argc,char* argv[] )
 			handle_mouse_event( window_get_event() );
 		}
 
-		end_frame();
+		update_model();
+		compose_frame();
+
+		end_frame(); // Present created frame to the screen.
 
 		// Keep game running at desired framerate.
 		frameTime = SDL_GetTicks() - frameStart;
@@ -46,6 +52,7 @@ int main( int argc,char* argv[] )
 	}
 
 	// I want my gc... :(
+	destruct_game();
 	exit_audio();
 	free_graphics();
 	destroy_window();

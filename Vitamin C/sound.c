@@ -1,4 +1,5 @@
 #include "sound.h"
+#include <stdio.h>
 
 void init_audio()
 {

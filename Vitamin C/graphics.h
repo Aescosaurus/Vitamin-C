@@ -18,8 +18,6 @@ void put_pixel( int x,int y,color_t c );
 
 // Get pixel format for color functions.
 SDL_PixelFormat* get_pixel_format();
-// Get the color of a pixel at (x, y) on the screen.
-color_t get_pixel( int x,int y );
 
 #define ScreenWidth 800
 #define ScreenHeight 600
