@@ -66,18 +66,21 @@ void put_pixel( int x,int y,color_t c )
 	*( Uint32* )p = c;
 }
 
-void draw_rect( int x,int y,int width,int height,color_t c )
-{
-	for( int y_c = y; y_c < y + height; ++y_c )
-	{
-		for( int x_c = x; x_c < x + width; ++x_c )
-		{
-			put_pixel( x_c,y_c,c );
-		}
-	}
-}
-
 SDL_PixelFormat* get_pixel_format()
 {
 	return( screen_surface->format );
+}
+
+color_t get_pixel( int x,int y )
+{
+	assert( x >= 0 );
+	assert( y >= 0 );
+	assert( x < ScreenWidth );
+	assert( y < ScreenHeight );
+
+	Uint8* p = ( Uint8* )screen_surface->pixels +
+		y * screen_surface->pitch +
+		x * get_pixel_format()->BytesPerPixel;
+
+	return( p );
 }

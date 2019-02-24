@@ -8,17 +8,16 @@
 
 int main( int argc,char* argv[] )
 {
-	const int fps = 60;
-	const int frameDelay = 1000 / fps;
+	const int fps = 60; // Target fps.
+	const int frameDelay = 1000 / fps; // Help for math.
 	
-	Uint32 frameStart;
-	int frameTime;
+	Uint32 frameStart; // Start time of each frame.
+	int frameTime; // Duration of each frame.
 
 	// Create the actual window and initialize everything.
 	create_window( "Vitamin C Framework!",
 		SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,
 		ScreenWidth,ScreenHeight,FALSE );
-
 	init_graphics( get_renderer() );
 	init_colors( get_pixel_format() );
 	init_audio();
@@ -35,21 +34,6 @@ int main( int argc,char* argv[] )
 			handle_keyboard_event( window_get_event() );
 			handle_mouse_event( window_get_event() );
 		}
-		
-		// Some test code.
-		if( mouse_left_is_pressed() )
-		{
-			color_t col = make_rgb( 255,255,255 );
-			if( key_is_pressed( SDLK_SPACE ) )
-			{
-				col = make_rgb( 0,255,255 );
-			}
-		
-			draw_rect( mouse_get_pos_x() - 15,
-				mouse_get_pos_y() - 15,
-				30,30,
-				col );
-		}
 
 		end_frame();
 
@@ -62,6 +46,7 @@ int main( int argc,char* argv[] )
 	}
 
 	// I want my gc... :(
+	exit_audio();
 	free_graphics();
 	destroy_window();
 
