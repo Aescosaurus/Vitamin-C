@@ -2,7 +2,7 @@
 #define COLORS_H
 
 #include "utils.h"
-#include "SDL_image.h"
+#include "SDL.h"
 
 typedef Uint32 color_t;
 

@@ -70,20 +70,20 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2 Image\include;C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2 Image\x64;C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2 Image\include;C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2 Image\x64;C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2 Image\include;C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2 Image\x64;C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2 Image\include;C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2 Image\x64;C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -91,11 +91,11 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2 Image\include;C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2 Image\x64;C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
@@ -105,11 +105,11 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2 Image\include;C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2 Image\x64;C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
@@ -121,13 +121,13 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2 Image\include;C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2 Image\x64;C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
@@ -139,13 +139,13 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2 Image\include;C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2 Image\x64;C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Aesc\Desktop\Vitamin C\Vitamin C\SDL2\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
@@ -155,6 +155,7 @@
     <ClCompile Include="keyboard.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="mouse.c" />
+    <ClCompile Include="sound.c" />
     <ClCompile Include="window.c" />
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +163,7 @@
     <ClInclude Include="graphics.h" />
     <ClInclude Include="keyboard.h" />
     <ClInclude Include="mouse.h" />
+    <ClInclude Include="sound.h" />
     <ClInclude Include="utils.h" />
     <ClInclude Include="window.h" />
   </ItemGroup>

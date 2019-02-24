@@ -2,7 +2,6 @@
 #define GRAPHICS_H
 
 #include "window.h"
-#include "SDL_image.h"
 #include "colors.h"
 
 void init_graphics( SDL_Renderer* rend );

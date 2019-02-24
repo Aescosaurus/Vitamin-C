@@ -6,14 +6,14 @@ bool_t mouse_left_down = FALSE;
 
 void handle_mouse_event( const SDL_Event* evt )
 {
+	// If mouse is move update it's location.
 	if( evt->type == SDL_MOUSEMOTION )
 	{
 		mouse_x_position = evt->motion.x;
 		mouse_y_position = evt->motion.y;
 	}
 
-	// mouse_left_down = ( evt.type == SDL_MOUSEBUTTONDOWN );
-	// mouse_left_down = ( evt.button.state == SDL_PRESSED );
+	// It's important to use an if else if here.
 	if( evt->type == SDL_MOUSEBUTTONDOWN )
 	{
 		mouse_left_down = TRUE;

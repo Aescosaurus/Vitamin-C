@@ -4,6 +4,7 @@
 #include "colors.h"
 #include "keyboard.h"
 #include "mouse.h"
+#include "sound.h"
 
 int main( int argc,char* argv[] )
 {
@@ -13,6 +14,7 @@ int main( int argc,char* argv[] )
 	Uint32 frameStart;
 	int frameTime;
 
+	// Create the actual window and initialize everything.
 	create_window( "Vitamin C Framework!",
 		SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,
 		ScreenWidth,ScreenHeight,FALSE );
@@ -26,12 +28,14 @@ int main( int argc,char* argv[] )
 
 		begin_frame();
 
+		// Process events until there are none left.
 		while( handle_events() )
 		{
 			handle_keyboard_event( window_get_event() );
 			handle_mouse_event( window_get_event() );
 		}
 		
+		// Some test code.
 		if( mouse_left_is_pressed() )
 		{
 			color_t col = make_rgb( 255,255,255 );
@@ -48,14 +52,15 @@ int main( int argc,char* argv[] )
 
 		end_frame();
 
+		// Keep game running at desired framerate.
 		frameTime = SDL_GetTicks() - frameStart;
-		
 		if( frameTime < frameDelay )
 		{
 			SDL_Delay( frameDelay - frameTime );
 		}
 	}
 
+	// I want my gc... :(
 	free_graphics();
 	destroy_window();
 
