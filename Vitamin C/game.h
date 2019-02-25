@@ -11,6 +11,5 @@ void compose_frame();
 void destruct_game();
 // ---------------User Functions Go Here---------------- //
 
-// ---------------User Variables Go Here---------------- //
-
+// ----------------------------------------------------- //
 #endif
