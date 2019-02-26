@@ -14,7 +14,7 @@ void exit_audio();
 
 // Returns a pointer to a newly created sound at path.
 //  Make sure to free it's memory when you're done.
-sound_t* create_sound( string_t path );
+sound_t* create_sound( const string_t path );
 // Free memory from a sound.
 void free_sound( sound_t* sound );
 // Play a sound.

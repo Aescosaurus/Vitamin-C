@@ -1,8 +1,8 @@
 #include "colors.h"
 
-SDL_PixelFormat* colors_pixel_format = NULL;
+const SDL_PixelFormat* colors_pixel_format = NULL;
 
-void init_colors( SDL_PixelFormat* pixel_format )
+void init_colors( const SDL_PixelFormat* pixel_format )
 {
 	colors_pixel_format = pixel_format;
 }

@@ -7,11 +7,12 @@
 typedef Uint32 color_t;
 
 // Initialize pixel format.
-void init_colors( SDL_PixelFormat* pixel_format );
+void init_colors( const SDL_PixelFormat* pixel_format );
 
 // Make rgb color with r(0-255), g(0-255), and b(0-255).
 color_t make_rgb( uchar r,uchar g,uchar b );
 
+// List of pre made colors, feel free to add new ones here.
 color_t color_white();
 color_t color_black();
 color_t color_gray();

@@ -12,7 +12,7 @@ void exit_audio()
 	Mix_Quit();
 }
 
-sound_t* create_sound( string_t path )
+sound_t* create_sound( const string_t path )
 {
 	sound_t* temp_sound = Mix_LoadWAV( path );
 

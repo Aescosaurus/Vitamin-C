@@ -15,10 +15,12 @@ int main( int argc,char* argv[] )
 	Uint32 frameStart; // Start time of each frame.
 	int frameTime; // Duration of each frame.
 
-	// Create the actual window and initialize everything.
+	// Create the actual window.
 	create_window( "Vitamin C Framework!",
 		SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,
 		ScreenWidth,ScreenHeight,FALSE );
+
+	// Initialize everything.
 	init_graphics( get_renderer() );
 	init_colors( get_pixel_format() );
 	init_audio();

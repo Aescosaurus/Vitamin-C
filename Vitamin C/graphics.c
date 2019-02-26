@@ -59,7 +59,7 @@ void put_pixel( int x,int y,color_t c )
 	*( Uint32* )p = c;
 }
 
-SDL_PixelFormat* get_pixel_format()
+const SDL_PixelFormat* get_pixel_format()
 {
 	return( screen_surface->format );
 }

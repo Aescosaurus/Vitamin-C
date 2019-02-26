@@ -17,7 +17,7 @@ void free_graphics();
 void put_pixel( int x,int y,color_t c );
 
 // Get pixel format for color functions.
-SDL_PixelFormat* get_pixel_format();
+const SDL_PixelFormat* get_pixel_format();
 
 #define ScreenWidth 800
 #define ScreenHeight 600
